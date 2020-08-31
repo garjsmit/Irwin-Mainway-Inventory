@@ -1,0 +1,104 @@
+package View_Controller;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ModifyProductController implements Initializable {
+
+    Stage stage;
+    Parent scene;
+
+    @FXML
+    private TableColumn<?, ?> partPriceCol;
+
+    @FXML
+    private TextField productStockTxt;
+
+    @FXML
+    private TextField productID;
+
+    @FXML
+    private TableColumn<?, ?> partStockCol;
+
+    @FXML
+    private Button Cancel;
+
+    @FXML
+    private TableColumn<?, ?> partID2Col;
+
+    @FXML
+    private TableColumn<?, ?> partIDCol;
+
+    @FXML
+    private TextField productPriceTxt;
+
+    @FXML
+    private TextField productMaxTxt;
+
+    @FXML
+    private TextField searchText;
+
+    @FXML
+    private Button Search;
+
+    @FXML
+    private TableColumn<?, ?> partName2Col;
+
+    @FXML
+    private TextField productMinTxt;
+
+    @FXML
+    private TableColumn<?, ?> partNameCol;
+
+    @FXML
+    private TextField productNameTxt;
+
+    @FXML
+    void onActionSearch(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onActionAddPartToProduct(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onActionRemoveAssociatedPart(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onActionDisplayMainScreen(ActionEvent event) throws IOException {
+        newScreen(event, "/View_Controller/MainScreen.fxml");
+    }
+
+    @FXML
+    void onActionSaveProduct(ActionEvent event) {
+
+    }
+
+    public void newScreen(ActionEvent event, String pathToScene) throws IOException {
+        stage = (Stage)((Button)event.getSource()).getScene().getWindow();
+        scene = FXMLLoader.load(getClass().getResource(pathToScene));
+        stage.setScene(new Scene(scene));
+        stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+
+    }
+}
