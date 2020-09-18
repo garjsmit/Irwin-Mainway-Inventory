@@ -4,7 +4,7 @@ package Model;
 Garrison J Smith
  */
 
-
+/** Part class provided. No changes made here. Abstract part that is instanciated an InHouse or Outsource part. */
 public abstract class Part {
     private int id;
     private String name;

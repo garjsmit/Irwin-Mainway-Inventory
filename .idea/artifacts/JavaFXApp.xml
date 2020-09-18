@@ -8,7 +8,7 @@
     </properties>
     <root id="root">
       <element id="archive" name="JavaFXApp.jar">
-        <element id="module-output" name="VERSIONTWO" />
+        <element id="module-output" name="IrwinMainwayInventoryManagement" />
       </element>
     </root>
   </artifact>

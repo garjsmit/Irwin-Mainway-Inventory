@@ -1,5 +1,6 @@
 package Model;
 
+/** Inherits methods from Part. */
 public class InHouse extends Part{
 
     private int machineID;
@@ -8,9 +9,14 @@ public class InHouse extends Part{
         super(id, name, price, stock, min, max);
         this.machineID = machineID;
     }
-
+    /**
+    * @return Returns machineID.
+    * */
     public int getMachineID() { return machineID;    }
 
+    /**
+     * @param machineID Set machineID.
+     * */
     public void setMachineID(int machineID) {  this.machineID = machineID;    }
 
 }

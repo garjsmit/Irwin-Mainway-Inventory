@@ -33,7 +33,7 @@
             <TextField fx:id="productStockTxt" layoutX="144.0" layoutY="302.0" prefHeight="26.0" prefWidth="106.0" />
             <TextField fx:id="productNameTxt" layoutX="144.0" layoutY="247.0" />
             <TextField fx:id="productID" disable="true" layoutX="144.0" layoutY="187.0" text="Auto Generated" />
-            <TableView layoutX="470.0" layoutY="100.0" prefHeight="200.0" prefWidth="439.0">
+            <TableView fx:id="partsTable" layoutX="470.0" layoutY="100.0" prefHeight="200.0" prefWidth="439.0">
               <columns>
                 <TableColumn fx:id="partIdCol" prefWidth="69.0" text="Part ID" />
                 <TableColumn fx:id="partNameCol" prefWidth="95.0" text="Part Name" />
@@ -42,11 +42,11 @@
               </columns>
             </TableView>
             <Button fx:id="Search" layoutX="823.0" layoutY="67.0" mnemonicParsing="false" onAction="#onActionSearch" text="Search" />
-            <TextField fx:id="searchText" layoutX="645.0" layoutY="67.0" promptText="Search by Name or ID" />
+            <TextField fx:id="partSearchText" layoutX="645.0" layoutY="67.0" promptText="Search by Name or ID" />
             <Button layoutX="842.0" layoutY="315.0" mnemonicParsing="false" onAction="#onActionAddPartToProduct" text="Add" />
-            <TableView layoutX="472.0" layoutY="369.0" prefHeight="200.0" prefWidth="439.0">
+            <TableView fx:id="associatedPartsTable" layoutX="472.0" layoutY="369.0" prefHeight="200.0" prefWidth="439.0">
               <columns>
-                <TableColumn fx:id="partID2Col" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="partId2Col" prefWidth="75.0" text="Part ID" />
                 <TableColumn fx:id="partName2Col" prefWidth="88.0" text="Part Name" />
                   <TableColumn fx:id="partStock2Col" prefWidth="128.0" text="Inventory Level" />
                   <TableColumn fx:id="partPrice2Col" prefWidth="147.0" text="Price/Cost per Unit" />
@@ -55,6 +55,10 @@
             <Button layoutX="685.0" layoutY="581.0" mnemonicParsing="false" onAction="#onActionRemoveAssociatedPartFromProduct" prefHeight="26.0" prefWidth="200.0" text="Remove Associated Part" />
             <Button layoutX="823.0" layoutY="623.0" mnemonicParsing="false" onAction="#onActionDisplayMainScreen" text="Cancel" />
             <Button layoutX="685.0" layoutY="623.0" mnemonicParsing="false" onAction="#onActionSave" text="Save" />
+            <Label fx:id="partNotFound" layoutX="470.0" layoutY="320.0" text="" />
+            <Label fx:id="pleaseSelectPart" layoutX="470.0" layoutY="315.0" />
+            <Label fx:id="minMaxError" layoutX="144.0" layoutY="443.0" />
+            <Label fx:id="stockError" layoutX="144.0" layoutY="333.0" />
          </children>
       </AnchorPane>
    </children>
